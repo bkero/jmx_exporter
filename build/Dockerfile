@@ -10,7 +10,7 @@ COPY integration_tests /opt/jmx_exporter/integration_tests
 WORKDIR /opt/jmx_exporter/
 RUN mvn package
 
-FROM anapsix/alpine-java:8
+FROM anapsix/alpine-java:9
 
 RUN apk update && apk upgrade && apk --update add curl && rm -rf /tmp/* /var/cache/apk/*
 
